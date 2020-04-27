@@ -1,0 +1,19 @@
+{
+    "name": "hazhir/blockchain",
+    "description": "a simple blockchain written in php",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hazhir Ahmadzadeh",
+            "email": "hazhir1811@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Hazhir\\": "src/"
+        }
+    }
+}
