@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Hazhir;
 
+use JsonException;
+
 class Blockchain
 {
     private array $chain;
@@ -33,8 +35,12 @@ class Blockchain
         return $this->chain;
     }
 
-    public function getChain(): array
+    public function getChain(): ?string
     {
-        return $this->chain;
+        try {
+            return json_encode($this->chain, JSON_THROW_ON_ERROR, 512);
+        } catch (JsonException $e) {
+            return$e->getMessage();
+        }
     }
 }

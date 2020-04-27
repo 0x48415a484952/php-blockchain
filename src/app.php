@@ -10,4 +10,4 @@ $blockchain = new Blockchain();
 $blockchain->addBlock(50, null);
 $blockchain->addBlock(12.5, 'sending to satoshi');
 
-var_dump($blockchain->getChain());
+echo $blockchain->getChain();
