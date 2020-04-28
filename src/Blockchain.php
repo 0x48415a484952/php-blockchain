@@ -9,6 +9,7 @@ use JsonException;
 class Blockchain
 {
     private array $chain;
+    private array $pendingTransactions;
 
     public function __construct()
     {

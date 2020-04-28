@@ -13,6 +13,10 @@ class BlockStructure
     public int $nonce;
     public string $hash;
     public ?string $previousHash;
+//    public string $fromAddress;
+//    public string $toAddress;
+//    private int $miningReward;
+//    private string $difficulty;
 
     public function __construct(float $amount, int $blockHeight, string $previousHash, ?string $message)
     {

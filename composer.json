@@ -10,7 +10,9 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {},
+    "require": {
+      "ext-json": "*"
+    },
     "autoload": {
         "psr-4": {
             "Hazhir\\": "src/"
