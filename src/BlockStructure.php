@@ -35,12 +35,22 @@ class BlockStructure
     private function mine(): string
     {
         $hash = null;
-        while (strpos(Hash::doubleSha256($this->prepareToBeHashed()), '00') !== 0) {
+        while (strpos(Helper::doubleSha256InputString($this->prepareToBeHashed()), '00') !== 0) {
             $this->nonce++;
-            $hash = Hash::doubleSha256($this->prepareToBeHashed());
+            $hash = Helper::doubleSha256InputString($this->prepareToBeHashed());
         }
         return $hash;
     }
+
+//    private function minePendingTransActions($miningRewardAddress): string
+//    {
+//        $blockStructure = new BlockStructure(
+//            Transaction::MINING_REWARD,
+//            $this->blockHeight,
+//            $this->previousHash,
+//            '');
+//        $block = new Block($blockStructure);
+//    }
 
     private function prepareToBeHashed(): string
     {

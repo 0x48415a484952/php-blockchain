@@ -11,7 +11,14 @@
     ],
     "minimum-stability": "dev",
     "require": {
-      "ext-json": "*"
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "tuupola/base58": "2.x-dev",
+        "simplito/elliptic-php": "dev-master",
+        "endroid/qr-code": "^3.0@dev"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
     },
     "autoload": {
         "psr-4": {

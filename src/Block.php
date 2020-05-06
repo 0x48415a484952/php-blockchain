@@ -8,7 +8,7 @@ class Block
 {
     public BlockStructure $blockStructure;
 
-    public array $block;
+//    public array $block;
 
     public function __construct(BlockStructure $blockStructure)
     {
