@@ -12,12 +12,16 @@ require '../vendor/autoload.php';
 $address = new Address();
 $address->generateWallet();
 
-
+echo $address->getPublicKey();
+echo '<br/>';
+echo $address->getPrivateKey();
 $publicKey = new QrCode($address->getPublicKey());
+
 $publicKey->setLabel('your public key', 16, null, LabelAlignment::CENTER);
 $publicKey->setSize(300);
+$publicKey->getContentType();
 $dataUri['publicKey'] = $publicKey->writeDataUri();
-
+//$pub = $publicKey->writeDataUri();
 $privateKey = new QrCode($address->getPrivateKey());
 $privateKey->setSize(300);
 $privateKey->setLabel('your private key', 16, null, LabelAlignment::CENTER);

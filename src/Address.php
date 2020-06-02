@@ -77,7 +77,7 @@ class Address
         try {
             return json_encode($this->wallet, JSON_THROW_ON_ERROR, 512);
         } catch (JsonException $e) {
-            echo $e->getMessage();
+            return $e->getMessage();
         }
     }
 
