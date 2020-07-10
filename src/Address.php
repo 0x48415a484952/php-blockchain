@@ -51,14 +51,6 @@ class Address
     private function generatePublicKeyFromPrivateKey(string $privateKey): void
     {
         $ellipticCurve = new EC('secp256k1');
-
-//        while (
-//            strpos($ellipticCurve->keyFromPrivate($privateKey)->getPublic(true, 'hex'), '1h') !== 0
-//        ) {
-//            $privateKey = $this->generatePrivateKey();
-//        }
-
-
         $publicKey = $ellipticCurve->keyFromPrivate($privateKey)->getPublic(true, 'hex');
         $publicKey = Helper::toRipemd160(Helper::toSha256($publicKey));
         $checksum = substr(Helper::doubleSha256('00'.$publicKey), 0, 8);
