@@ -20,7 +20,6 @@
     "require-dev": {
         "roave/security-advisories": "dev-master"
     },
-
     "autoload": {
         "psr-4": {
             "Hazhir\\": "src/"

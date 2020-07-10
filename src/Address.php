@@ -13,7 +13,6 @@ class Address
     private array $wallet;
 
     private const POOL = 'abcdefghijklmnopqrstuvwxyz0123456789';
-
     public function __construct()
     {
 
